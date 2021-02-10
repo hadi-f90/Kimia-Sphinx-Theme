@@ -1,0 +1,124 @@
+Folder PATH listing
+│   conf.py
+│   dir.txt
+│   index.rst
+│   index.rtc
+│   index.stylelog
+│   make.bat
+│   Makefile
+│   rest.bat
+│   
+├───basics
+│       at_goal.rst
+│       bugs.rst
+│       challenges1.rst
+│       challenges2.rst
+│       else.rst
+│       home.rst
+│       hurdles3.rst
+│       if.rst
+│       index.rst
+│       library.rst
+│       move.rst
+│       newspaper1.rst
+│       newspaper2.rst
+│       not.rst
+│       reading.rst
+│       refine1.rst
+│       refine2.rst
+│       refine3.rst
+│       refine4.rst
+│       repeat.rst
+│       rule2.rst
+│       rule3.rst
+│       rule4.rst
+│       summary1.rst
+│       summary2.rst
+│       summary3.rst
+│       summary4.rst
+│       surprises.rst
+│       tokens1.rst
+│       turn_around.rst
+│       while.rst
+│       
+├───contribute
+│       artists.rst
+│       contributed.rst
+│       developers.rst
+│       future_ideas.rst
+│       index.rst
+│       translators.rst
+│       
+├───exercises
+│       index.rst
+│       
+├───functional
+│       better_repeat.rst
+│       index.rst
+│       while_num.rst
+│       
+├───oop
+│       arguments2.rst
+│       conclusion.rst
+│       dir.rst
+│       facing_south.rst
+│       index.rst
+│       javascript.rst
+│       leak.rst
+│       left_is_clear.rst
+│       methods.rst
+│       modulo.rst
+│       oop.rst
+│       testing.rst
+│       turn_right.rst
+│       turn_right2.rst
+│       
+├───python
+│       advanced.rst
+│       exception.rst
+│       index.rst
+│       library.rst
+│       oop.rst
+│       python1.rst
+│       python2.rst
+│       
+├───recursion
+│       index.rst
+│       recursion1.rst
+│       recursion2.rst
+│       recursion3.rst
+│       recursion4.rst
+│       
+├───reference
+│       canvas.rst
+│       commands.rst
+│       comparison.rst
+│       css_mod.html
+│       howto.rst
+│       index.rst
+│       mazes.rst
+│       objects.rst
+│       sokoban.rst
+│       tour.rst
+│       weakness.rst
+│       worlds.rst
+│       
+└───variables
+        arguments1a.rst
+        arguments1b.rst
+        comparison.rst
+        diary.rst
+        for.rst
+        harvest3.rst
+        increment.rst
+        index.rst
+        listes.rst
+        newspaper3.rst
+        return.rst
+        scope.rst
+        slice.rst
+        string_index.rst
+        think.rst
+        variables.rst
+        world.rst
+        
