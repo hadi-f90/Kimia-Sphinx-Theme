@@ -6,7 +6,10 @@
 
 /* -- page layout ----------------------------------------------------------- */
 
-div.red p.admonition-title {background-color: red !important;}
+div.red p.admonition-title {
+    background-color: red !important;
+    .caption: 'مهم';
+}
 
 table.docutils td {
     border-right: 1px solid #aaa;
@@ -98,23 +101,24 @@ div.related ul li a:hover {
   background-image: -linear-gradient(top, #beff7f, #96c423 50%, #75a110);
 }
 
-div.related ul li a.logo{float: right; padding: 2px 20px 0 0; margin-left: 30px; font-size: 30px;
+div.related ul li a.logo{float: left; padding: 2px 20px 0 0; margin-left: 30px; font-size: 30px;
   font-weight: bold; text-decoration: none; color: white; line-height: 27px;
     position:relative;
   text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa,
     0 6px 1px rgba(0,0,0,.3), 0 0 5px rgba(0,0,0,.4), 0 1px 3px rgba(0,0,0,.3), 1px 3px 5px rgba(0,0,0,.4),
     2px 5px 10px rgba(0,0,0,.35), 5px 10px 10px rgba(0,0,0,.45);
 }
-img.logo{margin-right:10px; padding-right:10px;}
-div.related ul li a span.logo{position:relative; top:-10px !important;}
+img.logo{margin-left:10px; padding-left:10px; }
+div.related ul li a span.logo{position:relative; top:-5px !important;}
 
 dl {
     margin-right: 10px;
 }
 
 a[href^="http"] {
-    padding-left:16px;
-    background:transparent url(external_link.png) right no-repeat;
+    padding-right:0px;
+    padding-left: 16px;
+    background:transparent url(external_link.png) left no-repeat;
 }
 
 blockquote {
@@ -192,7 +196,7 @@ div.sphinxsidebar input[type="submit"]{
   background-image: -ms-linear-gradient(top, #2d5ab4 20%, #1e3c78 60%, #123264 80%);
   background-image: -o-linear-gradient(top, #2d5ab4 20%, #1e3c78 60%, #123264 80%);
   background-image: -linear-gradient(top, #2d5ab4 20%, #1e3c78 60%, #123264 80%);
-    padding: 2px 5px;
+    padding: 10px 5px;
     color: white;
 }
 
@@ -227,6 +231,7 @@ div.footer a {
 p {
     margin: 0.8em 0 0.5em 0;
 	direction: rtl;
+    text-align: right;
 }
 
 div.body a, div.sphinxsidebarwrapper a {
@@ -242,6 +247,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: sans-serif;
     font-weight: bold;
 	direction: rtl;
+    text-align: right;
 }
 
 h1 {
@@ -297,6 +303,7 @@ a.headerlink {
     padding: 0 4px 0 4px;
     text-decoration: none!important;
 	direction: rtl;
+    text-align: right;
 }
 
 a.headerlink:hover {
@@ -322,12 +329,13 @@ code, tt {
 	  font-size: 1.2em;
     font-style: normal;
     padding: 0 5px;
+    margin: 5px;
     background-color: whitesmoke;
 
     border: solid 1px #d4d4d4;
     border-radius: 5px;
-	text-align: left
-	direction: ltr
+	text-align: left;
+	direction: rtl;
 }
 
 
@@ -335,19 +343,23 @@ pre {
   font-family: monospace;
   font-style: normal;
 	font-size: 1.2em;
+    padding-left: 7px;
     margin: 0.5em;
 	white-space: pre-wrap;       /* css-3 */
 	white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
 	white-space: -pre-wrap;      /* Opera 4-6 */
 	white-space: -o-pre-wrap;    /* Opera 7 */
 	word-wrap: break-word;       /* Internet Explorer 5.5+ */
-	direction: rtl;
+	direction: ltr;
+    text-align: left;
+ 
 }
 
 pre a {
     color: inherit;
     text-decoration: underline;
 	direction: rtl;
+    text-align: right;
 }
 
 
@@ -420,7 +432,7 @@ table td, table th {
 div.topic p.topic-title {
     background-color: #3e7e10;
     margin: 0;
-    padding: 0.2em 0 0.2em 0.6em;
+    padding: 0.2em 0.2em 0em 0em;
     color: white;
     border-bottom: 1px solid #eee8d5;
     font-weight: bold;
@@ -428,7 +440,7 @@ div.topic p.topic-title {
 }
 
 div.topic p, div.topic div.highlight {
-    margin: 0.5em 1em 0.5em 1em;
+    margin: 0.3em 0.8em 0.8em 0.8em;
 }
 
 div.admonition, div.topic {
@@ -441,14 +453,14 @@ div.admonition, div.topic {
 }
 
 div.admonition p, div.admonition div.highlight {
-    margin: 0.5em 1em 0.5em 1em;
+    margin: 0.3em 0.8em 0.8em 0.8em;
 	direction: rtl;
 }
 
 div.admonition p.admonition-title
 {
     margin: 0;
-    padding: 0.2em 0 0.2em 0.6em;
+    padding: 0.2em 0.2em 0em 0em;
     color: white;
     border-bottom: 1px solid #eee8d5;
     font-weight: bold;
@@ -456,16 +468,28 @@ div.admonition p.admonition-title
 	direction: rtl;
 }
 
-div.warning p.admonition-title,
+div.warning p.admonition-title,{
+    background-color: #cb4b16;
+	direction: rtl;
+    .caption: 'هشدار';
+}
 div.important p.admonition-title {
     background-color: #cb4b16;
 	direction: rtl;
+    .caption: 'مهم';
 }
 
-div.hint p.admonition-title,
+div.hint p.admonition-title{
+    background-color: #268bd2;
+	direction: rtl;
+    .caption: 'راهنمایی';
+}
+
+
 div.tip p.admonition-title {
     background-color: #268bd2;
 	direction: rtl;
+    .caption: 'نکته';
 }
 
 div.note {
@@ -473,6 +497,7 @@ div.note {
     float: left;
     margin-right: 10px;
 	direction: rtl;
+   .caption: 'توجّه';
 }
 
 div.caution p.admonition-title,
@@ -483,7 +508,7 @@ div.error p.admonition-title {
 }
 
 div.admonition ul, div.admonition ol {
-    margin: 0.1em 0.5em 0.5em 3em;
+    margin: 0.2em 0.2em 0em 0em;
     padding: 0;
 	direction: rtl;
 }

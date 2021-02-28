@@ -117,7 +117,7 @@ html_theme = 'theme'
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = u"آموزش پایتون با ریبرگ"
+html_title = u"عنوان نمونه"
 
 # Add any paths that contain custom themes here, relative to this directory.
 html_theme_path = ["../"]
@@ -206,8 +206,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', 'ReeborgsWorld.tex', 'مستندات دنیای ریبرگ',
-   'آندره روبرگ', 'راهنما'),
+  ('index', 'ReeborgsWorld.tex', 'مستندات',
+   'نویسنده', 'راهنما'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -236,8 +236,8 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'دنیای ریبرگ', 'مستندات دنیای ریبرگ',
-     ['آندره روبرگ'], 1)
+    ('index', 'متن عنوان', 'مستندات ',
+     ['نویسنده'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -250,8 +250,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'دنیای ریبرگ', 'مستندات دنیای ریبرگ',
-   'آندره روبرگ،', 'دنیای ریبرگ', 'توضح کوتاه پروژه',
+  ('index', 'عنوان', 'مستندات ',
+   'نویسنده،', 'عنوان', 'توضح کوتاه پروژه',
    'بخش های دیگر'),
 ]
 
