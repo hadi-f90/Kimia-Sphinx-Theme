@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    
+    <title>با ریبرگ پایتون رو یاد بگیرید &mdash; عنوان نمونه</title>
+    
+    <link rel="stylesheet" href="_static/reeborg.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="نمایه" href="genindex.html" />
+    <link rel="search" title="جستجو" href="search.html" />
+    <link rel="top" title="عنوان نمونه" href="#" />
+    <link rel="next" title="Recursion" href="recursion/index.html" /> 
+
+  <script>
+    // intelligent scrolling of the sidebar content
+    // copied from the sphinx website
+    $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+          // yes: easy case -- always keep at the top
+          sb.css('top', $u.min([$u.max([0, wintop - offset - 10]),
+                                $(document).height() - sbh - 200]));
+        } else {
+          // no: only scroll if top/bottom edge of sidebar is at
+          // top/bottom edge of window
+          if (curtop > wintop && curbot > winbot) {
+              sb.css('top', $u.max([wintop - offset - 10, 0]));
+          } else if (curtop < wintop && curbot < winbot) {
+              sb.css('top', $u.min([winbot - sbh - offset - 20,
+                            $(document).height() - sbh - 200]));
+          }
+        }
+    });
+    </script>
+
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+             <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+             <a href="recursion/index.html" title="Recursion"
+             accesskey="N">next</a> |</li>
+        <li><a class="logo" href="/index_fa.html" class="fake_button">
+              <img class="logo"  src="_static/" alt="Logo"/>
+              <span class="logo">دنیای ریبرگ</span>
+            </a></li>
+        <li><a href="#">عنوان نمونه</a></li> 
+      </ul>
+    </div>
+  
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">با ریبرگ پایتون رو یاد بگیرید</a><ul>
+<li><a class="reference internal" href="#id2">می خوای برنامه نویسی یاد بگیری؟</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Next topic</h4>
+  <p class="topless"><a href="recursion/index.html"
+                        title="next chapter">Recursion</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="جستجو" />
+      <input type="hidden" name="check_keywords" value="بله" />
+      <input type="hidden" name="area" value="پیش فرض" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="id1">
+<h1>با ریبرگ پایتون رو یاد بگیرید<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>یاد گرفتن برنامه نویسی با ریبرگ آسونه همۀ کاری که باید انجام بدید اینه که این آموزش ها رو بخونید و مثال ها رو توی <a class="reference external" href="http://reeborg.ca/reeborg.html?lang=en&amp;mode=python">محیط ریبرگ</a> امتحان کنید.</p>
+<p>پیشنهاد می کنم که صفحه ی این آموزش ها و <a class="reference external" href="http://reeborg.ca/reeborg.html?lang=en&amp;mode=python">محیط ریبرگ</a> رو توی دو تا پنجره یا سربرگ جدا باز کنید.
+قبل از شروع آموزش ها با اجرای یه برنامه توی <a class="reference external" href="http://reeborg.ca/reeborg.html?lang=en&amp;mode=python">محیط ریبرگ</a> کاری کنید که ریبرگ اوّلین قدمش رو برداره.  راهنماها طوری طرّاحی شده اند که  بشه رو اون ها کلیک کرد و در صورتی که جایی به مشکل خورده باشید توصیه های مفیدی برای ادامه کار به شما ارائه می دهند.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>به <a class="reference external" href="http://reeborg.ca/reeborg.html?lang=en&amp;mode=python">محیط ریبرگ</a> برید و روی دکمه اجرا (یه مثلّث سفید کوچک توی پس  زمینه آبی) کلیک کنید و قدم برداشتن ربیرگ رو تماشا کنید.
+می تونید یه نگاهی هم به این <a class="reference external" href="http://youtu.be/yTdw97KNgGM">ویدئوی کوتاه</a> بندازید تا ببینید چطوری ریبرگ توی محیطش (دنیای خودش)  جا به جا می شه (البته ویدئو مال نسخه های قبلی هستش).  پیشنهاد می کنم  ویدئو رو تمام صفحه و با کیفی بالا نگاه کنید.</p>
+</div>
+<div class="section" id="id2">
+<h2>می خوای برنامه نویسی یاد بگیری؟<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-left" id="id6">
+<a class="reference internal image-reference" href="_images/student.jpg"><img alt="_images/student.jpg" src="_images/student.jpg" style="width: 40%;" /></a>
+<p class="caption"><span class="caption-text">فراگیر در حال استفاده از ریبرگ</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+<div class="legend">
+<p>کالیفرنیا، آمریکا</p>
+<p><em>با تشکّر از  ای. کاستانو به خاطر عکس</em></p>
+</div>
+</div>
+<p><strong>محیط ریبرگ برای شما طرّحی شده!</strong></p>
+<p>وقتی که که دنیای ریبرگ رو درست کردم این فکر توی سرم بود که یه محیط خودمونی و راحت برای یادگرفتن مفاهیم برنامه نویسی به وجود بیارم .
+با وجود این که می شه از جاوا اسکریپت-که زبان معمول دنیای وب هست- به عنوان زبان برنامه نویسی ریبرگ استفاده کرد، تصمیم گرفتم روی پایتون تمرکز کنم، زبانی که هم انعطاف پذیرتر بود و یادگرفتنش هم برای مبتدی ها و هم پیشرفته ها به یک اندازه راحت هست.
+این آموزش ها در درجه اوّل برای شمایی که می خواید برنامه نویسی یاد بگیرید نوشته شده.  با این وجود، من یک سری اطّلاعات دیگه ای رو هم برای معلّم ها و کاربرهای دیگه ی محیط ریبرگ تو این آموزش ها گنجوندم.  شما می تونید حین یادگرفتن مفاهیم برنامه نویسی بدون هیچ دغدغه ای از جا افتادن مورد مهمّی بی خیال اون اطّلاعات اضافی بشید.</p>
+<p>این  کتاب آنلاین نه بخش اصلی داره.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="recursion/index.html">ب. توابع بازگشتی</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference/index.html">چ. مرجع محیط ریبرگ</a></li>
+</ul>
+</div>
+<p>اگر روی هر کدوم از عنوان های بالا کلیک کنید به صفحه ای که زیرعنوان های هر بخش فهرست رو داره منتقل می شید.</p>
+<div class="admonition- admonition">
+<p class="admonition-title">برای مدرّس ها</p>
+<div class="figure align-default">
+<img alt="_images/rurple_book.png" src="_images/rurple_book.png" />
+</div>
+<p><em>دو تا کتاب (قرمز برای معلّم ها و آبی برای دانش آموزها) تولید شده توسّط سامسونگ کره بر اساس رورپل، برنامه ای که قبل از دنیای ریبرگ برای سیستم های رومیزی ساخته شده بود.</em></p>
+<p>دنیای ریبرگ شدیداً از`کارِلِ ربات`_ ریچارد پَتیس الهام گرفته.
+برای کنترل این ربات مجازی از سه تا زبان برنامه نویسی (پایتون، جاوا اسکریپت، و کافی اسکریپت) می شه استفاده کرد.  با این همه، این آموزش روی پایتون متمرکز شده که زبان برنامه نویسی مورد علاقۀ منه و به نظر خیلی ها هم یه زبان ایده آل برای آموزش مفاهیم برنامه نویسی به تازه کارهاست.</p>
+<p>توی این آموزش من تا اون جایی که می شد آشنایی به متغیّرها رو به تعویق انداختم.  همین کار رو هم برای نشانوندهای (arguments)  تابع ها انجام دادم.  این رویکرد به خاطر اینه که درس های اصلی پتس برای کارِل اصلاً متغیّری نداره.  تمرکز دو قسمت اوّل اصلی این آموزش به نام های <strong>آموزش های پایه ای</strong> و <strong>توابع بازگشتی</strong> روی این قسمت هست.
+دنیای ریبرگ با هدف درست شده که ایده ی ریچارد پتیس رو تا جای ممکن ساده کنه، در حالی که معرفی مفاهیم خیلی پیشرفته برنامه نویسی رو امکان پذیر می کنه.  بنابراین، به جای <strong>اوّلین برنامۀ</strong> «ساده ای» که توی بعضی از آموزش هایی به ظاهر برای تازه کارها پیدا می شه:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">HelloWorld</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hello, World&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>ساده ترین برنامه ی درستی که توی محیط ریبرگ کار می کنه این برنامه هست:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">()</span><span class="n">move</span>
+</pre></div>
+</div>
+<p>همین: یه دستور ساده.  برای تدریس به تازه کارها چی می تونه از این ساده تر باشه؟</p>
+<p>با این وجود، این دستور به همین تابع های ساده محدود نمی شه.  مثلاً اگه یکی بخواد به جای این کار رویکرد شیئ گرا رو استفاده کنه ساده ترین برنامه درستی که ریبرگ معادل همین یک دستور <code class="docutils literal notranslate"><span class="pre">()move</span></code> هست اینه:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">()</span><span class="n">reeborg</span> <span class="o">=</span> <span class="n">UsedRobot</span>
+<span class="p">()</span><span class="n">reeborg</span><span class="o">.</span><span class="n">move</span>
+</pre></div>
+</div>
+<p>همچنین، از اون جایی که استفاده از کتابخانه های استاندارد  مفیده، فراگیرها می تونن با نوشتن کدهای خودشون در مورد کتابخانه ها یادبگیرن و با این کار یاد می گیرن که پیمانه ها (modules) مثل خیلی های دیگه در اصل همون برنامه ها هستن.  فرض بر این که اونا یه تابع برای گردش به راست توی کتابخونه شون به اسم <code class="docutils literal notranslate"><span class="pre">()turn_right</span></code>  تعریف کردن، این کد درست خواهد بود:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">library</span> <span class="kn">import</span> <span class="n">turn_right</span>
+<span class="p">()</span><span class="n">turn_right</span>
+</pre></div>
+</div>
+<p>بنابراین، نیّت ما اینه که کاری کنیم که تا اون جایی که می شه فراگیرها درگیر کمترین مفاهیم ممکن بشند، و مفاهیم تازه (مثل استفاده از متغیّرها، نمادهای شیئ گرا، یا وارد کردن کد از یک کتابخانه) رو فقط موقعی یاد بگیرن که مقدّمات رو یادگرفته باشند.
+یک رهنمود تو نوشتن این آموزش ها این بوده که هر بار فقط یک مفهوم برنامه نویسی معرفی بشه.
+با این همه، سادگی رویکرد استفاده شده در محیط ریبرگ به این معنی نیست که  کاری که می شه کرد محدود به مقدّمات محیط ربات هست.
+نسخۀ پایتون محیط ریبرگ بر اساس <a href="#id7"><span class="problematic" id="id8">Brython_</span></a> هست و شامل خیلی از پیمانه های موحود در کتابخانه توابع استاندارد پایتون هست که می تونه تو برنامه نویسی پیشرفته به کار بره.
+<strong>یادگیری تکلیف محور</strong>
+محیط ریبرگ برای  <em>آموزش تکلیف محور</em> طراحی شده.  به فراگیرها تکلیف هایی که ریبرگ باید کامل کنه داده می شه و اون ها باید برنامه هایی رو بنویسند که به ریبرگ بگه چطور باید اون کار رو انجام بده.
+تکلیف ها شامل مواردی می شند که توی اون ها باید ریبرگ اشیائی رو جا به جا کنه، دیوار درست کنه، و یا به یه جای خاص توی دنیای ریبرگ بره.  اشیاء توی دنیای ریبرگ رنگی هستند، و جاهایی که باید ریبرگ اون اشیاء رو ببره با سایه ی خاکستری همون شیئ مشخّص شدن.</p>
+<img alt="_images/simple_task.gif" src="_images/simple_task.gif" />
+<p>اگر شما مثال هایی دارید که برای فراگیرهاتون مفیده (به خصوص تکلیف هایی برای ریبرگ)، ممنون می شم که اون ها رو برای من بفرستید تا این آموزش ها رو بهتر کنم.</p>
+<p><strong>رایگان</strong></p>
+<p>دنیای ریبرگ <strong>رایگان</strong> هستش.  یعنی: استفاده اش <em>مجّانیه</em>، شما <em>آزاد</em> هستید که اون رو کپی کنید (و بگذارید توی سایت آموزشگاهتون) و نیاز به هیچ ثبت نام و ورود به وبگاهی رو نداره. برخلاف بعضی از سایت های آموزش کد نویسی، فراگیرها رو مجبور به پیگیری یک مسیر از پیش تعریف شده نمی کنه.  از طرفی هم مدرّس ها <em>آزادند</em> تا حین استفاده از محیط ریبرگ محتواهای خودشون رو درست کنن.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>  
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+             <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+             <a href="recursion/index.html" title="Recursion"
+             >next</a> |</li>
+        <li><a class="logo" href="/index_fa.html" class="fake_button">
+              <img class="logo"  src="_static/" alt="Logo"/>
+              <span class="logo">دنیای ریبرگ</span>
+            </a></li>
+        <li><a href="#">عنوان نمونه</a></li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright
+          <a href="mailto:hadi_f@live.com">هادی فداکارثانی </a>
+        
+       - ساخته شده در <a href="http://sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+  <script>
+  $(document).ready(function() {
+      $('.hint').children().hide();
+      $('.hint p.admonition-title').show().css('cursor', 'pointer');
+      $('.hint p.admonition-title').click( function() {$(this).siblings().show().css('cursor', 'auto');})
+      $("a[href^='http']").attr('target','_blank');
+  });
+  </script>
+  </body>
+</html>

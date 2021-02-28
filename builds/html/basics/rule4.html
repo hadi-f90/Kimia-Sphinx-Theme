@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    
+    <title>قانون شمارۀ 4 &mdash; عنوان نمونه</title>
+    
+    <link rel="stylesheet" href="../_static/reeborg.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="نمایه" href="../genindex.html" />
+    <link rel="search" title="جستجو" href="../search.html" />
+    <link rel="top" title="عنوان نمونه" href="../index.html" /> 
+
+  <script>
+    // intelligent scrolling of the sidebar content
+    // copied from the sphinx website
+    $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+          // yes: easy case -- always keep at the top
+          sb.css('top', $u.min([$u.max([0, wintop - offset - 10]),
+                                $(document).height() - sbh - 200]));
+        } else {
+          // no: only scroll if top/bottom edge of sidebar is at
+          // top/bottom edge of window
+          if (curtop > wintop && curbot > winbot) {
+              sb.css('top', $u.max([wintop - offset - 10, 0]));
+          } else if (curtop < wintop && curbot < winbot) {
+              sb.css('top', $u.min([winbot - sbh - offset - 20,
+                            $(document).height() - sbh - 200]));
+          }
+        }
+    });
+    </script>
+
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+             <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li><a class="logo" href="/index_fa.html" class="fake_button">
+              <img class="logo"  src="../_static/" alt="Logo"/>
+              <span class="logo">دنیای ریبرگ</span>
+            </a></li>
+        <li><a href="../index.html">عنوان نمونه</a></li> 
+      </ul>
+    </div>
+  
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">قانون شمارۀ 4</a><ul>
+<li><a class="reference internal" href="#id2">نتیجه گیری</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/basics/rule4.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="جستجو" />
+      <input type="hidden" name="check_keywords" value="بله" />
+      <input type="hidden" name="area" value="پیش فرض" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="id1">
+<h1>قانون شمارۀ 4<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>تو درس های قبل برنامه ای طرّاحی کردیم که توی موقعیّت های بیشتر از اون چیزی که در نظر گرفته بودیم کار بکنه (می شد شرایط دیگه ای رو ساخت که برنامه مون اون جاها کار نکنه، ولی… برای این تمرین دیگه همین قدر بس بود).
+تا یادم نرفته؛ باید باید همین جا بگم که این برنامه برای این بود که با یک دور گشتن توی محیط، به ریبرگ امکان کاوش اون رو بده. با این که برنامه کوتاه بود و ساختارش می بایست تا این مرحله واضح بوده باشه، هدف این برنامه برای کسی که برای اوّلین بار اون رو بخواد ببینه اون قدرها هم مشخّص نیست. احتمالاً فکر خوبیه که یه چند تا یادداشت استفده کنیم و یا از اسم ها معنادارتری برای تعاریف استفاده کنیم. بگذارید با یادداشت ها شروع کنیم، یه کم بیشتر از اون حدّی که احتملاً فکرش رو می کنیم:</p>
+<div class="highlight-py3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># با گذاشتن یه نشانه نقطۀ شروع رو علامت می زنیم</span>
+<span class="n">put</span><span class="p">()</span>
+
+<span class="c1"># یه مسیر خالی پیدا می کنیم و شروع به حرکت می کنیم</span>
+<span class="k">while</span> <span class="ow">not</span> <span class="n">front_is_clear</span><span class="p">():</span>
+    <span class="n">turn_left</span><span class="p">()</span>
+<span class="n">move</span><span class="p">()</span>
+
+<span class="sd">&#39;&#39;&#39;  می دونیم که وقتی که به جایی که نشانه رو گذاشتیم برسیم، یک بار محیط رو دور زدیم.&#39;&#39;&#39;</span><span class="s1">&#39;</span>
+
+<span class="k">while</span> <span class="ow">not</span> <span class="n">object_here</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">right_is_clear</span><span class="p">():</span>  <span class="c1"># حرکت از منتی الیه سمت راست</span>
+        <span class="n">turn_right</span><span class="p">()</span>
+        <span class="n">move</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">front_is_clear</span><span class="p">():</span>    <span class="c1"># دیوار سمت راست تا هر جا ادامه داشت برو .</span>
+        <span class="n">move</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">turn_left</span><span class="p">()</span>  <span class="c1">#  اگه دیوار به سمت چپ ادامه داشت به چپ بچرخ</span>
+</pre></div>
+</div>
+<p>با این که این طوری منظورمون رو برای هر دستور واضح بیان می کنیم، این کار اون قدرها برای خلاصه کردن روش کار مورد استفاده برای حل مسئله (که به اسم الگوریتم شناخته می شه) مفید نیست. برای همین، این یادداشت ها اون قدری که دلمون می خواد برای یه شخص دیگه - که بخواد کد رو بخونه - ممکنه مفید نباشه.
+وقتی یادداشت ها رو بخونیم، متوجّه می شیم که برنامه 2 قسمت داره:</p>
+<ol class="arabic simple">
+<li><p>مشخّص کردن نقطه ی شروع؛</p></li>
+<li><p>راه رفتن در کنار دیوار سمت راست تا رسیدن به نقطۀ شروع.</p></li>
+</ol>
+<p>بیاید برنامه رو طوری بازنویسی کنیم که این دو تا قسمت مشخّص تر بشن و  یادداشت ها رو هم متفاوت تر بنویسیم::
+Let’s rewrite this program so that these two parts become clearer,
+and writing the comments differently:</p>
+<div class="highlight-py3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39; این برنامه به کاری می کنه که ریبرگ دور محیطش بر خلاف جهت عقربه های ساعت بچرخه و وقتی به نقطه ی شروعش برگشت متوقّف بشه. &#39;&#39;&#39;</span>
+
+<span class="k">def</span> <span class="nf">mark_starting_point_and_move</span><span class="p">():</span>
+    <span class="n">put</span><span class="p">()</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">front_is_clear</span><span class="p">():</span>
+        <span class="n">turn_left</span><span class="p">()</span>
+    <span class="n">move</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">follow_right_wall</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">right_is_clear</span><span class="p">():</span>
+        <span class="n">turn_right</span><span class="p">()</span>
+        <span class="n">move</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">front_is_clear</span><span class="p">():</span>
+        <span class="n">move</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">turn_left</span><span class="p">()</span>
+
+
+<span class="c1">#######</span>
+<span class="c1">##  پایان تعریف های بالا، اجرای برنامه برنامه از این جا به بعد.</span>
+<span class="c1">#######</span>
+
+<span class="n">mark_starting_point_and_move</span><span class="p">()</span>
+
+<span class="k">while</span> <span class="ow">not</span> <span class="n">object_here</span><span class="p">():</span>
+    <span class="n">follow_right_wall</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>این یکی واضح تر نیست؟</p>
+<p><strong>توجّه: شادی دلتون بخواد یه رونوشت از</strong> <code class="docutils literal notranslate"><span class="pre">follow_right_wall()</span></code> <strong>توی کتابخانه تون بگذارید تا وقتی لازم داشتید بتونید  دوباره ازش استفاده کنید.</strong></p>
+<div class="section" id="id2">
+<h2>نتیجه گیری<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>کارمون رو با یک مسئلۀ ساده (دور زدن حول محیط مستطیلی شکل) شروع کردیم و با بهبود کم کم اون ( که به نام اصلاح یا پالایش گام به گام معروفه) تونستیم برنامه ای بنویسیم که می تونست مسئله های بسیار مختلفی رو حل کنه. توی هر گام ما فقط تغییرات کمی رو اعمال کردیم. از طرفی هم قبل از این که مسئله ها و شرایط پیچیده تری رو در نظر بگیریم؛ بررسی کردیم تا خاطر جمع بشیم که راه حلّ مون کار می کنه. همچنین، برای بخش هایی از <em>الگوریتم</em> از اسم های آشناتری استفاده کردیم که خوندن و احتمالاً فهمیدن برنامه رو راحت تر می کرد. این کار راهبردی هست که شما بهتره توی نوشتن برنامه های خودتون ازش استفاده کنید:</p>
+<div class="admonition important" id="index-0">
+<p class="admonition-title">Important</p>
+<dl class="simple">
+<dt><strong>قانون شمارۀ 4</strong></dt><dd><p>گام هایی که باید برای نوشتن یک برنامه طی بشه:</p>
+<ol class="arabic simple">
+<li><p>ساده شروع کن؛</p></li>
+<li><p>هر بار فقط یک سری تغییرات کمی رو ایجاد کن،</p></li>
+<li><p>بررسی کن که تغییراتی که ایجاد کردی کارها و قسمت های قبلی رو از کار ننداخته باشه؛</p></li>
+<li><p>یادداشت های مشروح تری رو که اضافه می کنی طوری نباشند که فقط کار هر دستور رو تکرار می کنند؛ و</p></li>
+<li><p>از اسم های آشنا و شناساگر استفاده کن.</p></li>
+</ol>
+</dd>
+</dl>
+</div>
+<p>دو تا قسمت آخر لزوماً معادل قانون شمارۀ 2 هستند.</p>
+<p>حالا، قبلا از این که ادامه بدید و برید درس بعد، برنامه رو امتحان و در صورت لزوم اصلاح کنید تا از کارکردن برنامه ای که توی ویرایشگر مطمئن بشید.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>  
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+             <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li><a class="logo" href="/index_fa.html" class="fake_button">
+              <img class="logo"  src="../_static/" alt="Logo"/>
+              <span class="logo">دنیای ریبرگ</span>
+            </a></li>
+        <li><a href="../index.html">عنوان نمونه</a></li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright
+          <a href="mailto:hadi_f@live.com">هادی فداکارثانی </a>
+        
+       - ساخته شده در <a href="http://sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+  <script>
+  $(document).ready(function() {
+      $('.hint').children().hide();
+      $('.hint p.admonition-title').show().css('cursor', 'pointer');
+      $('.hint p.admonition-title').click( function() {$(this).siblings().show().css('cursor', 'auto');})
+      $("a[href^='http']").attr('target','_blank');
+  });
+  </script>
+  </body>
+</html>
