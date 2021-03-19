@@ -17,7 +17,7 @@ table.docutils td {
 table.docutils {border-top: 1px solid #aaa; border-left: 1px solid #aaa;}
 
 body {
-    font-family: Trebuchet MS,Helvetica,Arial, sans-serif;
+    font-family: Trebuchet MS,Helvetica, , sans-serif;
     font-size: 1em;
     line-height: 150%;
     text-align: center;
@@ -326,7 +326,7 @@ hr {
 
 code, tt {
     font-family: monospace;
-	  font-size: 1.2em;
+	font-size: 1.2em;
     font-style: normal;
     padding: 0 5px;
     margin: 5px;
@@ -352,7 +352,6 @@ pre {
 	word-wrap: break-word;       /* Internet Explorer 5.5+ */
 	direction: ltr;
     text-align: left;
- 
 }
 
 pre a {
@@ -497,7 +496,7 @@ div.note {
     float: left;
     margin-right: 10px;
 	direction: rtl;
-   .caption: 'توجّه';
+    .caption: 'توجّه';
 }
 
 div.caution p.admonition-title,

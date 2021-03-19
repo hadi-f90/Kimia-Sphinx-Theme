@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    
+    <title>پالایش ها: بخش 2 &mdash; لورم ایپسوم</title>
+    
+    <link rel="stylesheet" href="../_static/reeborg.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="نمایه" href="../genindex.html" />
+    <link rel="search" title="جستجو" href="../search.html" />
+    <link rel="top" title="لورم ایپسوم" href="../index.html" />
+    <link rel="next" title="پالایش ها: بخش 2" href="../chapter2/index.html" />
+    <link rel="prev" title="لورم ایپسوم چیست؟" href="../index.html" /> 
+
+  <script>
+    // intelligent scrolling of the sidebar content
+    // copied from the sphinx website
+    $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+          // yes: easy case -- always keep at the top
+          sb.css('top', $u.min([$u.max([0, wintop - offset - 10]),
+                                $(document).height() - sbh - 200]));
+        } else {
+          // no: only scroll if top/bottom edge of sidebar is at
+          // top/bottom edge of window
+          if (curtop > wintop && curbot > winbot) {
+              sb.css('top', $u.max([wintop - offset - 10, 0]));
+          } else if (curtop < wintop && curbot < winbot) {
+              sb.css('top', $u.min([winbot - sbh - offset - 20,
+                            $(document).height() - sbh - 200]));
+          }
+        }
+    });
+    </script>
+
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+             <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+             <a href="../chapter2/index.html" title="پالایش ها: بخش 2"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+             <a href="../index.html" title="لورم ایپسوم چیست؟"
+             accesskey="P">previous</a> |</li>
+        <li><a class="logo" href="/index.html" class="fake_button">
+              <img class="logo"  src="../_static/" alt="Logo"/>
+              <span class="logo">عنوان مستندات</span>
+            </a></li>
+        <li><a href="../index.html">لورم ایپسوم</a></li> 
+      </ul>
+    </div>
+  
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">پالایش ها: بخش 2</a><ul>
+<li><a class="reference internal" href="#id2">دنیا پیچیده تر از اون حرفاست</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../index.html"
+                        title="previous chapter">لورم ایپسوم چیست؟</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../chapter2/index.html"
+                        title="next chapter">پالایش ها: بخش 2</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/chapter1/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none">
+  <h3>جستجوی سریع</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="جستجو" />
+      <input type="hidden" name="check_keywords" value="بله" />
+      <input type="hidden" name="area" value="پیش فرض" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="id1">
+<h1>پالایش ها: بخش 2<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>علّت مشکل آخر قسمت 1 این جاست. ما نشانه رو گذاشتیم؛ ولی قبل از این که فرصتی برای حرکت داشته باشیم امتحان کردیم ببینیم نزدیکش ایستاده‌ایم یا نه. از آن جایی که روی بیپر بودیم هیچ وقت امکان رفتن تویحلقه‌ی <code class="docutils literal notranslate"><span class="pre">while</span></code> رو نداشتیم. شاید بتونیم برنامه رو با افزودن یک <code class="docutils literal notranslate"><span class="pre">move()</span></code> قبل از شروع حلقه درست کنیم؛ مثل این:</p>
+<div class="highlight-py3 notranslate"><div class="highlight"><pre><span></span><span class="n">put</span><span class="p">()</span>
+<span class="n">move</span><span class="p">()</span>
+<span class="k">while</span> <span class="ow">not</span> <span class="n">object_here</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">front_is_clear</span><span class="p">():</span>
+        <span class="n">move</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">turn_left</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="topic">
+<p class="topic-title">امتحان کنید!</p>
+<p>قبل از این که ادامه بدید امتحان کنید ببینید تا مطمئن بشید برنامه کار می کنه یا نه.</p>
+</div>
+<div class="section" id="id2">
+<h2>دنیا پیچیده تر از اون حرفاست<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>بیاید برنامه‌ای رو که نوشتیم رو توی یک محیط یه خورده پیچیده‌تر <strong>همین دور و بر 2 (Around 2)</strong> امتحان کنیم.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>یادتون نره این رو تو برنامه تون بگذارید:</p>
+<div class="highlight-py3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">library</span> <span class="kn">import</span> <span class="n">turn_right</span>
+</pre></div>
+</div>
+</div>
+<p>وقتی برنامه تون رو امتحان می‌کنید، می‌بینید که نتیجه دقیقاً اون چیزی که می‌خواستیم، نیست: ریبرگ میان بر می‌زنه و همه‌ی محیط رو دور نمی‌زنه. مشکل اینه که ما فرض کردیم ریبرگ فقط باید جلو بره یا به چپ به پیچه تا محیطش رو دور بزنه، هیچ وقت هرگز حساب این جور موقعیت‌هایی رو نکردیم که تو اون از ریبرگ بخواهیم به راست به پیچه. کاری که ریبرگ باید به کنه اینه که اول سمت راستش رو چک کنه ببینه آیا هنوز دیواری هست؛ اگر نبود، کاری کنیم که به راست به پیچه. این برنامه‌ی تغییر یافته‌ای هست که دقیقاً برای <em>انجام</em> همین کار هست:</p>
+<div class="highlight-py3 notranslate"><div class="highlight"><pre><span></span><span class="n">put</span><span class="p">()</span>
+<span class="n">move</span><span class="p">()</span>
+<span class="k">while</span> <span class="ow">not</span> <span class="n">object_here</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">right_is_clear</span><span class="p">():</span>
+        <span class="n">turn_right</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">front_is_clear</span><span class="p">():</span>
+        <span class="n">move</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">turn_left</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="topic">
+<p class="topic-title">نوبت شما!</p>
+<p>کار می کنه؟ به دقّت بخونیدش تا خودتون تصمیم بگیرید. بعد اجراش کنید تا ببینید نظر شما رو تأیید می کنه؟ اگه نشد، هر تغییری که فکر می‌کنید مناسب هست انجام بدید.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>  
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+             <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+             <a href="../chapter2/index.html" title="پالایش ها: بخش 2"
+             >next</a> |</li>
+        <li class="right" >
+             <a href="../index.html" title="لورم ایپسوم چیست؟"
+             >previous</a> |</li>
+        <li><a class="logo" href="/index.html" class="fake_button">
+              <img class="logo"  src="../_static/" alt="Logo"/>
+              <span class="logo">عنوان مستندات</span>
+            </a></li>
+        <li><a href="../index.html">لورم ایپسوم</a></li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; حق انتشار
+          <a href="mailto:hadi_f@live.com">هادی فداکارثانی </a>
+        
+       - ساخته شده در <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.1.
+    </div>
+  <script>
+  $(document).ready(function() {
+      $('.hint').children().hide();
+      $('.hint p.admonition-title').show().css('cursor', 'pointer');
+      $('.hint p.admonition-title').click( function() {$(this).siblings().show().css('cursor', 'auto');})
+      $("a[href^='http']").attr('target','_blank');
+  });
+  </script>
+  </body>
+</html>
