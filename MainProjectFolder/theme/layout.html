@@ -1,5 +1,5 @@
 {#
-    Modified from basic/layout.html by André Roberge
+    Modified from basic/layout.html by first André Roberge to build Reeborg theme and then by Hadi Fadakar Sani to make it compatible with right-to-left languages
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     Master layout template for Sphinx themes.
@@ -36,7 +36,7 @@
         {%- block rootrellink %}
         <li><a class="logo" href="/index_fa.html" class="fake_button">
               <img class="logo"  src="{{ pathto('_static/' + logo, 1) }}" alt="Logo"/>
-              <span class="logo">دنیای ریبرگ</span>
+              <span class="logo">عنوان مستندات</span>
             </a></li>
         <li><a href="{{ pathto(master_doc) }}">{{ shorttitle|e }}</a></li>
         {%- endblock %}
@@ -61,7 +61,7 @@
             {#- old style sidebars: using blocks -- should be deprecated #}
             {%- block sidebartoc %}
             {%- if display_toc %}
-              <h3 direction="rtl">{{ _('Table Of Contents') }}</h3>
+              <h3 direction="rtl">{{ _('فهرست') }}</h3>
               {{ toc }}
             {%- endif %}
             {%- endblock %}
@@ -142,7 +142,7 @@
     <link rel="search" title="{{ _('جستجو') }}" href="{{ pathto('search') }}" />
     {%- endif %}
     {%- if hasdoc('copyright') %}
-    <link rel="copyright" title="{{ _('حق کپی') }}" href="{{ pathto('copyright') }}" />
+    <link rel="copyright" title="{{ _('حق انتشار') }}" href="{{ pathto('copyright') }}" />
     {%- endif %}
     <link rel="top" title="{{ docstitle|e }}" href="{{ pathto('index') }}" />
     {%- if parents %}
@@ -225,9 +225,9 @@
     <div class="footer">
     {%- if show_copyright %}
       {%- if hasdoc('copyright') %}
-        {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">حق کپی</a> {{ copyright }}.{% endtrans %}
+        {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">copyright</a> {{ copyright }}.{% endtrans %}
       {%- else %}
-        {% trans copyright=copyright|e %}&copy; Copyright
+        {% trans copyright=copyright|e %}&copy; حق انتشار
           <a href="mailto:hadi_f@live.com">هادی فداکارثانی </a>
         {% endtrans %}
       {%- endif %}
