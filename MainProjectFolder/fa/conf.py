@@ -50,8 +50,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'دنیای ریبرگ'
-copyright = u'آندره روبرگ'
+project = u'لورم ایپسوم'
+copyright = u'هادی فداکارثانی'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -117,7 +117,7 @@ html_theme = 'theme'
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = u"عنوان نمونه"
+html_title = u"لورم ایپسوم"
 
 # Add any paths that contain custom themes here, relative to this directory.
 html_theme_path = ["../"]
@@ -127,7 +127,7 @@ html_theme_path = ["../"]
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-html_logo = "../../src/images/robot_e.png"
+html_logo = "../../src/images/lorem-ipsum.png"
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
@@ -186,7 +186,7 @@ html_show_copyright = True
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'ReeborgsWorlddoc'
+htmlhelp_basename = 'SinaTheme'
 
 
 # -- Options for LaTeX output ---------------------------------------------

@@ -1,0 +1,25 @@
+{
+    "MicroPython.executeButton": [
+        {
+            "text": "▶",
+            "tooltip": "Run",
+            "alignment": "left",
+            "command": "extension.executeFile",
+            "priority": 3.5
+        }
+    ],
+    "MicroPython.syncButton": [
+        {
+            "text": "$(sync)",
+            "tooltip": "sync",
+            "alignment": "left",
+            "command": "extension.execute",
+            "priority": 4
+        }
+    ],
+    "restructuredtext.confPath": "${workspaceFolder}\\MainProjectFolder\\fa",
+    "python.linting.pylintArgs": [
+        "--init-hook",
+        "import sys; sys.path.extend([\"\"c:\\\\Users\\\\Hadi\\\\.vscode\\\\extensions\\\\ms-python.devicesimulatorexpress-2020.0.36321\\\\out\"\",\"\"c:\\\\Users\\\\Hadi\\\\.vscode\\\\extensions\\\\ms-python.devicesimulatorexpress-2020.0.36321\\\\out\\\\micropython\"\",\"\"c:\\\\Users\\\\Hadi\\\\.vscode\\\\extensions\\\\ms-python.devicesimulatorexpress-2020.0.36321\\\\out\\\\clue\"\",\"\"c:\\\\Users\\\\Hadi\\\\.vscode\\\\extensions\\\\ms-python.devicesimulatorexpress-2020.0.36321\\\\out\\\\base_circuitpython\"\"])"
+    ]
+}

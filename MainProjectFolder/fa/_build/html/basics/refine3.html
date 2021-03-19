@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    
+    <title>پالایش ها: بخش 3 &mdash; عنوان نمونه</title>
+    
+    <link rel="stylesheet" href="../_static/reeborg.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="نمایه" href="../genindex.html" />
+    <link rel="search" title="جستجو" href="../search.html" />
+    <link rel="top" title="عنوان نمونه" href="../index.html" /> 
+
+  <script>
+    // intelligent scrolling of the sidebar content
+    // copied from the sphinx website
+    $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+          // yes: easy case -- always keep at the top
+          sb.css('top', $u.min([$u.max([0, wintop - offset - 10]),
+                                $(document).height() - sbh - 200]));
+        } else {
+          // no: only scroll if top/bottom edge of sidebar is at
+          // top/bottom edge of window
+          if (curtop > wintop && curbot > winbot) {
+              sb.css('top', $u.max([wintop - offset - 10, 0]));
+          } else if (curtop < wintop && curbot < winbot) {
+              sb.css('top', $u.min([winbot - sbh - offset - 20,
+                            $(document).height() - sbh - 200]));
+          }
+        }
+    });
+    </script>
+
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+             <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li><a class="logo" href="/index_fa.html" class="fake_button">
+              <img class="logo"  src="../_static/" alt="Logo"/>
+              <span class="logo">دنیای ریبرگ</span>
+            </a></li>
+        <li><a href="../index.html">عنوان نمونه</a></li> 
+      </ul>
+    </div>
+  
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">پالایش ها: بخش 3</a><ul>
+<li><a class="reference internal" href="#id2">محیط پیچیده‌تر</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/basics/refine3.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="جستجو" />
+      <input type="hidden" name="check_keywords" value="بله" />
+      <input type="hidden" name="area" value="پیش فرض" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="id1">
+<h1>پالایش ها: بخش 3<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>همان طور که حتماً متوجه شدید؛ برنامه کار نمی کنه. چیزی که اتفاق می افته اینه که وقتی دیواری دور و بر ریبرگ نباشه، توی یک حلقه بی نهایت گیر می افته. ما باید کاری کنیم که بعد از گردش به راست یک گام به جلو حرکت``move()`` کنه، مثل طوری که این پایین مشخّص شده:</p>
+<div class="highlight-py3 notranslate"><div class="highlight"><pre><span></span><span class="n">put</span><span class="p">()</span>
+<span class="n">move</span><span class="p">()</span>
+<span class="k">while</span> <span class="ow">not</span> <span class="n">object_here</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">right_is_clear</span><span class="p">():</span>
+        <span class="n">turn_right</span><span class="p">()</span>
+        <span class="n">move</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">front_is_clear</span><span class="p">():</span>
+        <span class="n">move</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">turn_left</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="section" id="id2">
+<h2>محیط پیچیده‌تر<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="topic">
+<p class="topic-title">یه دنیای دیگه!</p>
+<p>حالا محیط <strong>همین دور و بر 3 (Around 3)</strong>  رو در نظر بگیرید. برنامه‌ی ما توش کار می کنه؟</p>
+</div>
+<p>همان طور که حتماً حدس زدید، متأسّفانه جواب نه هست. سعی کنید قبل از این که ادامه بدید علّتش بفهمید که چرا کار نکرد؟</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>  
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+             <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li><a class="logo" href="/index_fa.html" class="fake_button">
+              <img class="logo"  src="../_static/" alt="Logo"/>
+              <span class="logo">دنیای ریبرگ</span>
+            </a></li>
+        <li><a href="../index.html">عنوان نمونه</a></li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright
+          <a href="mailto:hadi_f@live.com">هادی فداکارثانی </a>
+        
+       - ساخته شده در <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.1.
+    </div>
+  <script>
+  $(document).ready(function() {
+      $('.hint').children().hide();
+      $('.hint p.admonition-title').show().css('cursor', 'pointer');
+      $('.hint p.admonition-title').click( function() {$(this).siblings().show().css('cursor', 'auto');})
+      $("a[href^='http']").attr('target','_blank');
+  });
+  </script>
+  </body>
+</html>
