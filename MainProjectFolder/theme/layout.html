@@ -36,7 +36,7 @@
         {%- block rootrellink %}
         <li><a class="logo" href="/index.html" class="fake_button">
               <img class="logo"  src="{{ pathto('_static/' + logo, 1) }}" alt="Logo"/>
-              <span class="logo">عنوان مستندات</span>
+              <span class="logo">دنیای ریبرگ</span>
             </a></li>
         <li><a href="{{ pathto(master_doc) }}">{{ shorttitle|e }}</a></li>
         {%- endblock %}
@@ -80,7 +80,7 @@
             {%- block version %}
 <select onChange="window.location.href=this.value">
     <option value="{{pathto("../en/"+pagename)}}" selected>English version</option>
-    <option value="{{pathto("../fa/"+pagename)}}">نسخه فارسی</option>
+    <option value="{{pathto("../fa/"+pagename)}}">نسخه‌ی فارسی</option>
 </select>
             {%- endblock %}
           {%- endif %}
@@ -216,6 +216,7 @@
 
   {%- block sidebar2 %} {# possible location for sidebar #} {% endblock %}
       <div class="clearer"></div>
+      <div id="pos-article-display-sticky-26670"></div>
     </div>
 {%- endblock %}
 
@@ -227,13 +228,13 @@
       {%- if hasdoc('copyright') %}
         {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">copyright</a> {{ copyright }}.{% endtrans %}
       {%- else %}
-        {% trans copyright=copyright|e %}&copy; حق انتشار
-          <a href="mailto:hadi_f@live.com">هادی فداکارثانی </a>
+        {% trans copyright=copyright|e %}&copy; حق انتشار:
+          <a href="mailto:hadi_f@live.com">هادی فداکارثانی - </a>
         {% endtrans %}
       {%- endif %}
     {%- endif %}
     {%- if last_updated %}
-      {% trans last_updated=last_updated|e %} {{ last_updated }}آخرین به روز رسانی در.{% endtrans %}
+      {% trans last_updated=last_updated|e %} آخرین به روز رسانی: {{ last_updated }}.{% endtrans %}
     {%- endif %}
     {%- if show_sphinx %}
       {% trans sphinx_version=sphinx_version|e %} - ساخته شده در <a href="http://sphinx-doc.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}

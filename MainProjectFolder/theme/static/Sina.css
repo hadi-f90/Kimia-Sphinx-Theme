@@ -1,0 +1,571 @@
+/* reeborg.css
+ * Modified from sphinxdoc.css of the sphinxdoc theme.
+*/
+
+@import url("basic.css");
+
+/* -- page layout ----------------------------------------------------------- */
+
+div.red p.admonition-title {
+    background-color: red !important;
+}
+
+table.docutils td {
+    border-right: 1px solid #aaa;
+}
+table.docutils {border-top: 1px solid #aaa; border-left: 1px solid #aaa;}
+
+body {
+    font-family: DimaWeb, Yekan, Vazir, Behdad, sans-serif;
+    font-weight: normal;
+    font-size: 100%;
+    line-height: 150%;
+    text-align: center;
+    padding: 0;
+    margin: auto;
+    max-width: 1200px;
+    min-width: 800px;
+    box-shadow: 0px 0px 10px #9aa;
+    background: url("subtle_dots.png") repeat;
+
+}
+
+div.document {
+    text-align: right;
+    background-color: white;
+	direction: rtl
+}
+
+div.bodywrapper {
+    margin: .1% .7% .1% 230px;
+    border-left: 0.16em double rgb(146, 158, 183);
+	direction: rtl
+}
+
+div.body {
+    background-color: white;
+    margin: unset;
+    padding: 1% 1% 1% 1%;
+    min-height: 300px;
+	direction: rtl;
+}
+
+div.related {
+    font-size: 1em;
+  background-color: #123264;
+  background-image: -webkit-linear-gradient(top, #2d5ab4 20%, #1e3c78 60%, #123264 80%);
+  background-image: -moz-linear-gradient(top, #2d5ab4 20%, #1e3c78 60%, #123264 80%);
+  background-image: -ms-linear-gradient(top, #2d5ab4 20%, #1e3c78 60%, #123264 80%);
+  background-image: -o-linear-gradient(top, #2d5ab4 20%, #1e3c78 60%, #123264 80%);
+  background-image: -linear-gradient(top, #2d5ab4 20%, #1e3c78 60%, #123264 80%);
+    padding: 0;
+    border-bottom: 4px solid #75a110;
+	direction: rtl;
+}
+
+div.related ul {
+    height: 37px;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-weight: bold;
+}
+
+div.related ul li {
+    margin: 0;
+    padding: 0;
+    height: 2em;
+    float: right;
+}
+
+div.related ul li.left {
+    float: left;
+    margin-left: 5px;
+}
+
+div.related ul li a {
+    margin: 0;
+    height: 37px;
+    padding: 8px 5px 12px;
+    line-height: 37px;
+    text-decoration: none;
+    color: white;
+}
+
+div.related ul li a:hover {
+    background-color: #75a110;
+    background-image: -webkit-linear-gradient(top, #beff7f, #96c423 50%, #75a110);
+    background-image: -moz-linear-gradient(top, #beff7f, #96c423 50%, #75a110);
+    background-image: -ms-linear-gradient(top, #beff7f, #96c423 50%, #75a110);
+    background-image: -o-linear-gradient(top, #beff7f, #96c423 50%, #75a110);
+    background-image: -linear-gradient(top, #beff7f, #96c423 50%, #75a110);
+}
+
+div.related ul li a.logo{
+    float: left; 
+    padding: 2px 20px 0 0; 
+    margin-left: 30px; 
+    font-family: 'DimaYekanOutline', 'DimaPlatinum','Dima Sogand'; 
+    font-size: 2.3vw;
+    font-weight: bolder; 
+    color: rgb(248, 88, 29);
+    line-height: 27px;
+    position:relative;
+    animation-duration: 1.5s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+    from {
+    margin-left: 100%;
+    width: 300%;
+    }
+
+    75% {
+    font-size: 300%;
+    margin-left: 25%;
+    width: 150%;
+    }
+
+    to {
+    margin-left: 0%;
+    width: 100%;
+    }
+}
+
+img.logo{margin-left:10px; padding-left:10px; }
+div.related ul li a span.logo{position:relative; top:-10px !important;}
+
+dl {
+    margin-right: 10px;
+}
+
+a[href^="http"] {
+    padding-right:0px;
+    padding-left: 16px;
+    background:transparent url(external_link.png) left no-repeat;
+}
+
+blockquote {
+    font-style: italic;
+	direction: rtl;
+}
+
+/*-----------------------------------*/
+div.sphinxsidebarwrapper {
+    position: relative;
+    padding: 0;
+}
+
+div.sphinxsidebar {
+    margin: auto;
+    padding: 15px 0px 15px 19px;
+    width: 195px;
+    max-width: 220px;
+    float: left;
+    font-family: 'IranSans Medium';
+    font-size: 1em;
+    text-align: right;
+    padding-left: 1.25em;
+	direction: rtl;
+}
+
+
+div.sphinxsidebar h3, div.sphinxsidebar h4 {
+    border-top: 1px solid #0a507a;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    padding-top: 0.5em;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-left: 14px;
+    padding-right: 14px;
+    font-weight: 300;
+    font-family: 'IranSans Light';
+	direction: rtl;
+}
+
+div.sphinxsidebar h3 a {
+    color: #123264;
+}
+
+div.sphinxsidebar h4 {
+    font-size: 1.2em;
+}
+
+
+div.sphinxsidebar ul {
+    margin-top: 7px;
+    padding: 0;
+    line-height: 130%;
+    color: #586e75;
+}
+
+div.sphinxsidebar ul ul {
+    margin-right: 20px;
+}
+
+div.sphinxsidebar ul li {
+    list-style-type: none;
+}
+
+div.sphinxsidebar input{
+    border: 1px solid #eee8d5;
+    font-family: 'IranSans Medium';
+	direction: rtl;
+}
+
+div.sphinxsidebar input[type="submit"]{
+  border: none;
+  background-color: #123264;
+  background-image: -webkit-linear-gradient(top, #2d5ab4 20%, #1e3c78 60%, #123264 80%);
+  background-image: -moz-linear-gradient(top, #2d5ab4 20%, #1e3c78 60%, #123264 80%);
+  background-image: -ms-linear-gradient(top, #2d5ab4 20%, #1e3c78 60%, #123264 80%);
+  background-image: -o-linear-gradient(top, #2d5ab4 20%, #1e3c78 60%, #123264 80%);
+  background-image: -linear-gradient(top, #2d5ab4 20%, #1e3c78 60%, #123264 80%);
+    padding: 10px 5px;
+    color: white;
+}
+
+div.sphinxsidebar input[type="submit"]:hover {
+  background-color: #75a110;
+  background-image: -webkit-linear-gradient(top, #beff7f, #96c423 50%, #75a110);
+  background-image: -moz-linear-gradient(top, #beff7f, #96c423 50%, #75a110);
+  background-image: -ms-linear-gradient(top, #beff7f, #96c423 50%, #75a110);
+  background-image: -o-linear-gradient(top, #beff7f, #96c423 50%, #75a110);
+  background-image: -linear-gradient(top, #beff7f, #96c423 50%, #75a110);
+}
+
+div.sphinxsidebar #searchbox input[type="submit"] {
+    font-size: 0.8em;
+    font-family: 'IranSans';
+    float: left;
+    width: auto;
+    min-width: min-content;
+    padding: 0.26em;
+    box-sizing: content-box;
+    border-radius: 2.5px 0 0 2.5px;
+}
+
+div.sphinxsidebar #searchbox input[type="text"] {
+    font-size: 0.8em;
+    font-family: 'IranSans Light';
+    float: right;
+    min-width: 20%;
+    width: 76%;
+    padding: 0.24m;
+    box-sizing: border-box;
+    border-radius: 0 2.5px 2.5px 0;
+}
+
+div.footer {
+    background-color: white;
+    color: #2d5ab4;
+    padding: 3px 8px 3px 0;
+    clear: both;
+    font-size: 0.8em;
+    text-align: center;
+	direction: rtl;
+}
+
+div.footer a {
+    color: #2d5ab4;
+    text-decoration: none;
+}
+
+/* -- body styles ----------------------------------------------------------- */
+
+p {
+    margin: 0.8em 0 0.5em 0;
+	direction: rtl;
+    text-align: right;
+}
+
+div.body a, div.sphinxsidebarwrapper a {
+    color: #2d5ab4;
+    text-decoration: none;
+}
+
+div.body a:hover, div.sphinxsidebarwrapper a:hover, div.footer a:hover {
+    border-bottom: 1px solid #669d9d;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Estedad-VF, Vazir, 'IranSans Light', Behdad, Shahab, sans-serif;
+    font-weight: bold;
+	direction: rtl;
+    text-align: right;
+}
+
+h1 {
+    margin: 0;
+    padding: 0.7em 0 0.3em 0;
+    color: #123264;
+    line-height: 1.2em;
+}
+
+h2 {
+    margin: 1.3em 0 0.2em 0;
+    padding: 0 0 10px 0;
+    color: #123264;
+}
+h1, h2, h3, h4 {
+    color: #123264;
+	direction: rtl;
+}
+
+
+h3 {
+    margin: 1em 0 -0.3em 0;
+    padding-bottom: 5px;
+}
+
+
+div.body h1 a, div.body h2 a, div.body h3 a, div.body h4 a, div.body h5 a, div.body h6 a {
+    color: #657B83!important;
+}
+
+h1 a.anchor, h2 a.anchor, h3 a.anchor, h4 a.anchor, h5 a.anchor, h6 a.anchor {
+    display: none;
+    margin: 0 0 0 0.3em;
+    padding: 0 0.2em 0 0.2em;
+    color: #aaa!important;
+}
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor,
+h5:hover a.anchor, h6:hover a.anchor {
+    display: inline;
+}
+
+h1 a.anchor:hover, h2 a.anchor:hover, h3 a.anchor:hover, h4 a.anchor:hover,
+h5 a.anchor:hover, h6 a.anchor:hover {
+    color: #777;
+    background-color: #eee;
+}
+
+a.headerlink {
+    color: #c60f0f!important;
+    font-size: 1em;
+    margin-right: 6px;
+    padding: 0 4px 0 4px;
+    text-decoration: none!important;
+	direction: rtl;
+    text-align: right;
+}
+
+a.headerlink:hover {
+    background-color: #ccc;
+    color: white!important;
+	direction: rtl;
+}
+
+
+hr {
+    border: 1px solid #eee;
+    margin: 2em;
+}
+
+.highlight {
+    border: solid 1px #d4d4d4;
+    border-radius: 5px;
+}
+
+
+code, tt {
+    font-family: 'Vazir Code', monospace;
+	font-size: 1.2em;
+    font-style: normal;
+    padding: 0 5px;
+    margin: 5px;
+    background-color: whitesmoke;
+    border: solid 1px #d4d4d4;
+    border-radius: 2.5px;
+	text-align: left;
+	direction: rtl;
+}
+
+
+pre {
+    font-family: 'Vazir Code', monospace;
+    font-style: normal;
+	font-size: 1.2em;
+    padding-left: 7px;
+    margin: 0.5em;
+    border-radius: 1.5px;
+	white-space: pre-wrap;       /* css-3 */
+	white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+	white-space: -pre-wrap;      /* Opera 4-6 */
+	white-space: -o-pre-wrap;    /* Opera 7 */
+	word-wrap: break-word;       /* Internet Explorer 5.5+ */
+	direction: ltr;
+    text-align: left;
+}
+
+pre a {
+    color: inherit;
+    text-decoration: underline;
+	direction: rtl;
+    text-align: right;
+}
+
+
+div.quotebar {
+    background-color: #f8f8f8;
+    max-width: 250px;
+    float: right;
+    padding: 2px 7px;
+    border: 1px solid #ccc;
+	direction: rtl;
+}
+
+.toctree-wrapper ul {
+    list-style: none;
+	direction: rtl;
+}
+.toctree-l1 > a {
+    font-size: 120%;
+    font-weight: bold;
+	direction: rtl;
+}
+
+.emoji {
+    font-family: "Noto Color Emoji", "Segoe UI Emoji", sans-serif;
+}
+
+/* -- sidebars -------------------------------------------------------------- */
+
+div.sidebar {
+    width: 40%;
+    float: right;
+    margin: 1em 0 1em 0;
+    border: 1px solid #eee;
+    background-color: #ffe;
+    padding: 0;
+    box-shadow: 0px 8px 6px -8px #93a1a1;
+	direction: rtl;
+}
+
+div.sidebar div.code {
+    margin: 0 1em;
+	direction: ltr;
+}
+
+div.sidebar p.sidebar-title {
+    background-color: #123264;
+    margin: 0;
+    padding: 0.2em 0 0.2em 0.6em;
+    color: white;
+    border-bottom: 1px solid #eee8d5;
+    font-weight: bold;
+	direction: rtl;
+}
+
+div.sidebar p.sidebar-title span.pre {
+    color: black;
+	direction: rtl;
+}
+
+div.sidebar p {
+    margin: 0.1em 0 0.1em 0.3em;
+	direction: rtl;
+}
+
+
+table {
+    border-collapse: collapse;
+    margin: 0 -0.5em 0 -0.5em;
+}
+
+table td, table th {
+    padding: 0.2em 0.5em 0.2em 0.5em;
+}
+
+div.topic p.topic-title {
+    background-color: #3e7e10;
+    border-radius: 2.5px 2.5px 2.5px 2.5px;
+    margin: 0;
+    padding: 0.2em 0.2em 0em 0em;
+    color: white;
+    border-bottom: 1px solid #eee8d5;
+    font-weight: bold;
+	direction: rtl;
+}
+
+div.topic p, div.topic div.highlight {
+    margin: 0.3em 0.8em 0.8em 0.8em;
+    border-radius: 2.5px 2.5px 2.5px 2.5px;
+}
+
+div.admonition, div.topic {
+    margin: 1em 0 1em 0;
+    border: 1px solid #eee;
+    background-color: #ffe;
+    padding: 0;
+    box-shadow: 0px 8px 6px -8px #93a1a1;
+    border-radius: 2.5px 2.5px 2.5px 2.5px;
+	direction: rtl;
+}
+
+div.admonition p, div.admonition div.highlight {
+    margin: 0.3em 0.8em 0.8em 0.8em;
+    border-radius: 2.5px 2.5px 2.5px 2.5px;
+	direction: rtl;
+}
+
+div.admonition p.admonition-title
+{
+    margin: 0;
+    padding: 0.2em 0.2em 0em 0em;
+    border-radius: 2.5px 2.5px 2.5px 2.5px;
+    color: white;
+    border-bottom: 1px solid #eee8d5;
+    font-weight: bold;
+    background-color: #663399;
+	direction: rtl;
+}
+
+div.warning p.admonition-title {
+    background-color: #cb4b16;
+    border-radius: 2.5px 2.5px 2.5px 2.5px;
+	direction: rtl;
+}
+div.important p.admonition-title {
+    background-color: #cb4b16;
+    border-radius: 2.5px 2.5px 2.5px 2.5px;
+	direction: rtl;
+}
+
+div.hint p.admonition-title{
+    background-color: #268bd2;
+    border-radius: 2.5px 2.5px 2.5px 2.5px;
+	direction: rtl;
+}
+
+
+div.tip p.admonition-title {
+    background-color: #268bd2;
+    border-radius: 2.5px 2.5px 2.5px 2.5px;
+	direction: rtl;
+}
+
+div.note {
+    width: 45%;
+    float: left;
+    margin-right: 10px;
+    border-radius: 2.5px 2.5px 2.5px 2.5px;
+	direction: rtl;
+}
+
+div.caution p.admonition-title,
+div.attention p.admonition-title,
+div.danger p.admonition-title,
+div.error p.admonition-title {
+    background-color: #dc322f;
+    border-radius: 2.5px 2.5px 2.5px 2.5px;
+}
+
+div.admonition ul, div.admonition ol {
+    margin: 0.2em 0.2em 0em 0em;
+    padding: 0;
+	direction: rtl;
+}
