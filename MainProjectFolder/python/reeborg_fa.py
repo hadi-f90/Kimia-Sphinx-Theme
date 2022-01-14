@@ -30,7 +30,7 @@ def build_wall():  #py:build_wall
     RUR._build_wall_()
 
 
-def carries_object(obj=None):  #py:carries_object
+def carries_object(obj=None):    #py:carries_object
     """Indicates whether Reeborg carries an object or not.
 
     Args:
@@ -50,10 +50,7 @@ def carries_object(obj=None):  #py:carries_object
         >>> carries_object("banana")
         []
     """
-    if obj is not None:
-        ans = RUR._carries_object_(obj)
-    else:
-        ans = RUR._carries_object_()
+    ans = RUR._carries_object_(obj) if obj is not None else RUR._carries_object_()
     return list(ans)
 
 
@@ -128,7 +125,7 @@ def no_highlight():  #py:no_highlight
     RUR._no_highlight_()
 
 
-def object_here(obj=None):  #py:object_here
+def object_here(obj=None):    #py:object_here
     """Indicates whether any type of objects are present at Reeborg's location.
 
     Args:
@@ -147,10 +144,7 @@ def object_here(obj=None):  #py:object_here
         >>> object_here("banana")
         []
     """
-    if obj is not None:
-        ans = RUR._object_here_(obj)
-    else:
-        ans = RUR._object_here_()
+    ans = RUR._object_here_(obj) if obj is not None else RUR._object_here_()
     return list(ans)  # convert from JS list-like object to proper Python list
 
 

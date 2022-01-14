@@ -22,9 +22,10 @@ source_path = join(script_path, source_folder_name)
 source_path_len = len(source_path) + len(pathsep)
 build_path = join(script_path, build_folder_name, "html")
 rst_files = glob(join(script_path, '**/*.rst'), recursive=True)
-size_dict = {}
-for rst_file in rst_files:
-    size_dict[rst_file] = [getsize(rst_file), getmtime(rst_file), 0]
+size_dict = {
+    rst_file: [getsize(rst_file), getmtime(rst_file), 0]
+    for rst_file in rst_files
+}
 
 while True:
     for rst_file in rst_files:
